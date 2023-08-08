@@ -7,9 +7,9 @@ const router = express.Router();
 
 const viewPath = require('../utils/path');
 
-router.get('/', (req, res, next) => {
+router.get('/contact-us', (req, res, next) => {
     
-  res.sendFile(viewPath('shop.html'));
+  res.sendFile(viewPath('contact-us.html'));
   });
 
   module.exports = router;

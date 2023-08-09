@@ -20,9 +20,7 @@ app.use(shopRoutes);
 app.use('/admin',adminRoutes);
 app.use(contactRoutes);
 app.use(successRoutes);
-
-app.use((req, res, next) =>{
-  res.status(404).sendFile(viewPath('page-not-found.html'));
-})
+const pagenotfoundControllers = require('./controllers/404');
+app.use(pagenotfoundControllers.page404);
 
 app.listen(3000);

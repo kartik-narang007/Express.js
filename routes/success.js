@@ -6,9 +6,8 @@ const router = express.Router();
 
 const viewPath = require('../utils/path');
 
-router.post('/success', (req, res, next) => {
-    
-    res.sendFile(viewPath('success.html'));
-    });
+const successControllers = require('../controllers/contactus');
+
+router.post('/success', successControllers.sucess);
   
     module.exports = router;

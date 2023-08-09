@@ -5,11 +5,8 @@ const express = require('express');
 const router = express.Router();
 
 
-const viewPath = require('../utils/path');
+const controllersRoutes = require('../controllers/product');
 
-router.get('/', (req, res, next) => {
-    
-  res.sendFile(viewPath('shop.html'));
-  });
+router.get('/', controllersRoutes.getProducts);
 
   module.exports = router;
